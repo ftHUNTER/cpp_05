@@ -3,6 +3,9 @@
 
 #include <iostream>
 #include <exception>
+#include "AForm.hpp"
+
+class AForm;
 
 class BURECURAT
 {
@@ -35,6 +38,7 @@ class BURECURAT
         int getGrade()const;
 		void	increment();
 		void	decrement();
+		void	signForm(AForm &tmp);
 };
 
 std::ostream	&operator<<(std::ostream& out, const BURECURAT& ref);

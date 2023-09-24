@@ -64,3 +64,19 @@ void BURECURAT::decrement()
 	else 
 		grade += 1;
 }
+void	BURECURAT::signForm(AForm &tmp)
+{
+	if (this->grade >= tmp.getGradToSign() && tmp.getSign() == false)
+	{
+		tmp.setSign(true);
+		std::cout << this->getName() << " signed " << tmp.getName() << std::endl;
+	}
+	else if (this->grade < tmp.getGradToSign() && tmp.getSign() == false)
+	{
+		std::cout << this->getName() << " couldn't sign " << tmp.getName() << " because grade too low" << std::endl;
+	}
+	else 
+		std::cout << this->getName() << " couldn't sign " << tmp.getName() << " because it's already signed" << std::endl;
+
+
+}
